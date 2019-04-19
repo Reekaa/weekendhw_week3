@@ -7,6 +7,14 @@ class Beers {
     this.data = [];
   }
 
+  bindEvent(){
+    PubSub.subscribe('BeerSelection:change', (event) => {
+      const selectedIndex = event.detail;
+      const selectedBeer = this.data[selectedIndex];
+    PubSub.publish('Beer:SelectedBeer-ready', this.data[selectedIndex])
+    })
+  }
+
   getData() {
     const url = `https://api.punkapi.com/v2/beers`
     const requestHelper = new RequestHelper(url);
@@ -20,7 +28,7 @@ class Beers {
         console.error(message);
       })
   }
-
 }
+
 
 module.exports = Beers;
