@@ -24,6 +24,7 @@ h1{
   text-align: center;
   color: white;
   text-align: center;
+  background-color: black;
 }
 h2{
   color: 	#F5F5DC;
@@ -32,6 +33,11 @@ h2{
   text-decoration: underline;
 }
 h3{
+  color: 	#F5F5DC;
+  font-size: 26px;
+  text-align: center;
+}
+h4{
   color: 	#F5F5DC;
   font-size: 26px;
   text-align: center;

@@ -22,6 +22,10 @@ class BeerInfo {
     beerTag.textContent = beer.tagline;
     this.container.appendChild(beerTag);
 
+    const beerAbv = document.createElement('h4');
+    beerAbv.textContent = `ABV: ${beer.abv}`;
+    this.container.appendChild(beerAbv);
+
     const beerDescription = document.createElement('p');
     beerDescription.textContent = `Description: ${beer.description}`;
     this.container.appendChild(beerDescription);
@@ -31,7 +35,7 @@ class BeerInfo {
     this.container.appendChild(foodPairing);
 
     const tip = document.createElement('p');
-    tip.textContent = `Brewer's tips: ${beer.brewers_tips}`;
+    tip.textContent = `Brewers tips: ${beer.brewers_tips}`;
     this.container.appendChild(tip);
 
     const beerImg = document.createElement('img');
