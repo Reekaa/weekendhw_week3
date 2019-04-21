@@ -28,8 +28,5 @@ class Beers {
         console.error(message);
       })
   }
-
 }
-
-
 module.exports = Beers;

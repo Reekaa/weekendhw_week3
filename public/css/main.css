@@ -1,13 +1,14 @@
 body{
   background-image: url(background.jpg);
   height: 100%;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 #logoBeer{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  width: 300px;
+  width: 400px;
   height: 150px;
 }
 img{
@@ -22,13 +23,21 @@ h1{
   font-size: 50px;
   text-align: center;
   color: white;
+  text-align: center;
 }
 h2{
-  color: white;
-  font-size: 30px;
+  color: 	#F5F5DC;
+  font-size: 35px;
+  text-align: center;
+  text-decoration: underline;
+}
+h3{
+  color: 	#F5F5DC;
+  font-size: 26px;
+  text-align: center;
 }
 p{
-  color: white;
+  color: 	#F5F5DC;
   font-size: 25px;
 }
 label{

@@ -16,14 +16,15 @@ class BeerSelectionView {
       const selectedBeerIndex = event.target.value;
       PubSub.publish('BeerSelection:change', selectedBeerIndex);
     });
-  }
-
+}
+  
   populateSelect(beerData){
     beerData.forEach((beer, index) => {
       const option = document.createElement('option');
       option.textContent = beer.name;
       option.value = index;
       this.element.appendChild(option);
+
     });
   }
 }
