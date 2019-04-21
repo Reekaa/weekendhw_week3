@@ -8,13 +8,13 @@ class BeerSelectionView {
 
   bindEvent(){
     PubSub.subscribe('Beers:beer-data-loaded' ,(event) => {
-    const beerData = event.detail;
-    this.populateSelect(beerData);
+      const beerData = event.detail;
+      this.populateSelect(beerData);
     });
 
     this.element.addEventListener('change', (event) =>{
-    const selectedBeerIndex = event.target.value;
-    PubSub.publish('BeerSelection:change', selectedBeerIndex);
+      const selectedBeerIndex = event.target.value;
+      PubSub.publish('BeerSelection:change', selectedBeerIndex);
     });
   }
 
@@ -24,9 +24,8 @@ class BeerSelectionView {
       option.textContent = beer.name;
       option.value = index;
       this.element.appendChild(option);
-    })
+    });
   }
-
-  }
+}
 
 module.exports = BeerSelectionView;

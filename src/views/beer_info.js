@@ -18,41 +18,22 @@ class BeerInfo {
     beerName.textContent = beer.name;
     this.container.appendChild(beerName);
 
-    const beerDescription = document.createElement('h3');
-    beerDescription.textContent = beer.description;
+    const beerDescription = document.createElement('p');
+    beerDescription.textContent = `Description: ${beer.description}`;
     this.container.appendChild(beerDescription);
+
+    const foodPairing = document.createElement('p');
+    foodPairing.textContent = `Our food reommendation: ${beer.food_pairing[1]}`;
+    this.container.appendChild(foodPairing);
 
     const beerImg = document.createElement('img');
     beerImg.src = beer.image_url;
     this.container.appendChild(beerImg);
+
+
   }
-  // createImage(imageUrl){
-  //   const img = document.createElement('img');
-  //   console.log(imageUrl);
-  //   img.src = imageUrl;
-  //   return img;
-  // }
 
 
-  // getBeersbyImage(beers){
-  //   this.clearBeer();
-  //
-  //   beers.forEach((beer) => {
-  //     const img = this.createImage(beer.image_url);
-  //     this.element.appendChild(img);
-  //   });
-  // }
-  //
-  // clearBeer(){
-  //   this.element.innerHTML = ' ';
-  // }
-  //
-  // createImage(imageUrl){
-  //   const img = document.createElement('img');
-  //   console.log(imageUrl);
-  //   img.src = imageUrl;
-  //   return img;
-  // }
 }
 
 module.exports = BeerInfo;

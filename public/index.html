@@ -3,14 +3,18 @@
   <head>
     <meta charset="utf-8">
     <script src="js/bundle.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <title>Beer</title>
   </head>
   <body>
+    <img id="logoBeer" src="brewdog.jpg" alt="logo">
     <h1 id="logo">BrewDog beer collection</h1>
-    <label>Select a beer: </label>
-    <select id="beer-list">
-      <option selected beer></option>
-    </select>
-      <div id="beer-info"></div>
+    <div class="search-bar">
+      <label>Select from our collection: </label>
+      <select id="beer-list">
+        <option selected beer></option>
+      </select>
+    </div>
+    <div id="beer-info"></div>
   </body>
 </html>

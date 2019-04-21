@@ -11,7 +11,7 @@ class Beers {
     PubSub.subscribe('BeerSelection:change', (event) => {
       const selectedIndex = event.detail;
       const selectedBeer = this.data[selectedIndex];
-    PubSub.publish('Beer:SelectedBeer-ready', this.data[selectedIndex])
+    PubSub.publish('Beer:SelectedBeer-ready', selectedBeer)
     })
   }
 
@@ -28,6 +28,7 @@ class Beers {
         console.error(message);
       })
   }
+
 }
 
 
